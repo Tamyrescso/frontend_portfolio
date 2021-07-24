@@ -27,7 +27,7 @@ h1 {
     font-weight: bold;
     line-height: 60px;
     letter-spacing: 2mm;
-    margin: 100px auto 50px auto;
+    margin: 100px auto 80px auto;
 }
     
 h2 {
@@ -41,9 +41,33 @@ h2 {
 .round-images {
     border-radius: 100px;
     display: block;
-    margin: auto auto auto auto;
+    margin: auto auto 200px auto;
 }
 a:link, a:visited {
     color:whitesmoke;
         
+}
+a:hover {
+    color: rgb(3, 78, 3)
+}
+#linkedin {
+    text-decoration: none;
+    display:block;
+    margin: 50px auto 50px auto;
+    background-color: #ff781ee8;
+    padding: 30px;
+    width: 400px;
+    border-radius: 15px;
+    font-weight: bold;
+   
+   
+    
+
+
+
+    
+
+    
+
+
 }
