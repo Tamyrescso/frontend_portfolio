@@ -1,3 +1,7 @@
+* {
+    padding: 0;
+    margin: 0;
+}
 body {            
     background-image: url('pexels-aleksandar.jpg');
     background-repeat: no-repeat;
@@ -5,21 +9,31 @@ body {
     background-position: center;
     width: 100%;
     height: 100%;
-    font-size: 18px;
-    line-height: 25px;
-    font-family: monospace;
+}
+.navigation-bar ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #ff781ee8;
+}
+.navigation-bar li {
+    float: left;
+}
+.navigation-bar li a {
+    display: block;
+    padding: 14px 16px;
     color: #f5f5f5;
-    
-    
+    text-decoration: none;
+    font-weight: bold;
 }
-p {
-    text-align: justify;
-    margin: auto 20px;
-    text-indent: 25px;
-
+.top img {
+    border-radius: 100px;
+    float: left;
+    margin-left: 150px;
+    margin-top: 100px;
+    margin-bottom: 180px;
 }
-
-h1 {
+.top h1 {
+    float: right;
     text-align: center;
     font-family: monospace;
     color:#ff781ee8;
@@ -27,47 +41,55 @@ h1 {
     font-weight: bold;
     line-height: 60px;
     letter-spacing: 2mm;
-    margin: 100px auto 80px auto;
+    margin-right: 150px;
+    margin-top: 200px;
 }
+.main, .bottom {
+    margin-left: 30px;
+}
+.main h2{
+    color:#ff781ee8;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    clear: both;
     
-h2 {
+}
+.main p {
+    font-size: 18px;
+    line-height: 25px;
+    font-family: monospace;
+    color: #f5f5f5;
+    text-align: left;
+}
+.bottom h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color:#ff781ee8;
-    margin-left: 30px;
-    margin-top: 50px;
 }
-            
-
-.round-images {
-    border-radius: 100px;
+.bottom ul {
+    color: #f5f5f5;
+    font-family: monospace;
+    font-size: 18px;
+    line-height: 25px;
+}
+button {
+    background-color: #ff781ee8;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 20px 50px;
+    font-weight: bold;
+    font-size: 15px;
     display: block;
-    margin: auto auto 200px auto;
+    margin: auto auto 20px; 
 }
+button a {
+    text-decoration: none;
+}
+h2, p, ul {
+    margin-bottom: 15px;
+}    
 a:link, a:visited {
-    color:whitesmoke;
-        
+    color:whitesmoke;      
 }
 a:hover {
-    color: rgb(3, 78, 3)
-}
-#linkedin {
-    text-decoration: none;
-    display:block;
-    margin: 50px auto 50px auto;
-    background-color: #ff781ee8;
-    padding: 30px;
-    width: 400px;
-    border-radius: 15px;
-    font-weight: bold;
-   
-   
-    
-
-
-
-    
-
-    
-
-
+    color: #034e03
 }
