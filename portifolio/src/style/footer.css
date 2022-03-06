@@ -1,0 +1,38 @@
+.footerBar {
+  background-color: var(--gold-lighter);
+  bottom: 0;
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  height: 5vh;
+  width: 100vw;
+  box-shadow: 0px -15px 10px -15px var(--shadow),
+              1px -16px 11px -16px var(--shadow);
+  align-items: center;
+  justify-content: center;
+}
+
+.textFooter {
+  width: 60vh;
+  text-align: center;
+  font-family: var(--paragraph);
+  font-size: 1.5vh;
+}
+
+.spoon {
+  color: #6c6972;
+  font-size: 2vh;
+  padding: 3px;
+}
+
+.mug {
+  color: #4984be;
+  font-size: 2vh;
+  padding: 3px;
+}
+
+.heart {
+  color: #e43509;
+  font-size: 2vh;
+  padding: 3px;
+}
