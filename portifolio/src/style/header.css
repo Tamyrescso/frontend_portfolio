@@ -1,0 +1,41 @@
+.headerBar {
+  /* background: rgb(233, 220, 220); */
+  /* box-shadow: 0 4px 30px rgba(180, 22, 22, 0.938); */
+  position: static;
+  height: 90%;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 5vw;
+  margin-left: 1vw;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  width: 40vw;
+}
+
+.navBar a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.658);
+  font-family: 'Yellowtail', cursive;
+  font-size: 2em;
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+
+.languages {
+  margin-right: 2vw;
+  background-color: none;
+  border: none;
+  border-bottom: solid 3px black;
+  border-radius: 5%;
+  height: 3vh;
+  width: 7vw;
+  cursor: pointer;
+}

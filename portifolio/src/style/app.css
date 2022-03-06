@@ -1,0 +1,16 @@
+:root {
+  --purple-primary: #3C0D8F;
+  --purple-lighter: #7642CF;
+  --gold-primary: #ecebe7;
+  --gold-lighter: #DEB554;
+  --white-primary: #f1ebeb;
+  --black-primary: #312f2f;
+  --glass: #ffffff26;
+  --details: #0B7A0F;
+  --title: 'Sacramento', cursive;
+  --paragraph: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--gold-primary);
+}
