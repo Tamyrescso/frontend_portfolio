@@ -1,7 +1,4 @@
 .headerBar {
-  background: var(--gold-lighter);
-  box-shadow: 0px 1px 2px 0px var(--shadow),
-            1px 2px 4px 0px var(--shadow);
   height: 7vh;
   width: 100vw;
   display: flex;
@@ -9,54 +6,99 @@
   align-items: center;
   position: absolute;
   z-index: 10;
+  box-shadow: 0px -15px 10px 15px var(--shadow),
+              1px -16px 11px 16px var(--shadow);
+  background-color: var(--orange);
+}
+
+.exitBtn, .menuBtn {
+  background-color: transparent;
+  border: none;
+  font-family: var(--title);
+  font-size: 4vh;
+  color: var(--black-primary);
+  width: fit-content;
+  cursor: pointer;
+  margin-left: .5em;
 }
 
 .logo {
-  width: 7vh;
-  margin-left: 1vw;
-}
-
-.logo:hover {
-  transform: rotateZ(360deg);
-  transition: 1s;
+  display: none;
 }
 
 .navBar {
-  display: flex;
-  justify-content: space-between;
-  width: 40vw;
-}
-
-.navBar h3 {
-  width: fit-content;
-  text-align: center;
-  padding: 0 10px;
-}
-
-.navBar a {
-  text-decoration: none;
-  color: var(--black-primary);
-  font-family: 'Yellowtail', cursive;
-  font-size: 3vh;
-  width: fit-content;
-}
-
-.navBar a:hover {
-  text-decoration: underline #da252562;
+  display: none;
 }
 
 .languages {
-  margin-right: 3vh;
-  background-color: var(--gold-lighter);
-  border: none;
-  border-bottom: solid 3px var(--black-primary);
-  border-radius: 5%;
-  height: 3vh;
-  width: 10vh;
+  margin: .5em;
+  width: 15vh;
+  height: 100%;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.languages:hover {
-  box-shadow: 0px 1px 2px 0px var(--shadow),
-            1px 2px 4px 0px var(--shadow);
+.brazil, .usa{
+  margin: 1vh;
+  width: 32%;
+  height: 60%;
+  border-radius: 100%;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.brazil:hover, .usa:hover {
+  transform: scale(0.8);
+}
+
+@media (orientation: landscape) {
+  .menuBtn {
+    display: none;
+  }
+  .navBar {
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+  }
+  
+  .navBar button {
+    width: fit-content;
+    text-align: center;
+    padding: 0 10px;
+  }
+  
+  button {
+    background-color: transparent;
+    border: none;
+    font-family: var(--title);
+    font-size: 3vh;
+    color: var(--black-primary);
+    width: fit-content;
+    cursor: pointer;
+  }
+  
+  button .food {
+    display: none;
+  }
+  
+  button:hover .tech {
+    display: none;
+  }
+  
+  button:hover .food {
+    display: inline;
+  }
+  
+  .logo {
+    display: block;
+    width: 7vh;
+    margin-left: .5em;
+  }
+  
+  .logo:hover {
+    transform: rotateZ(360deg);
+    transition: 1s;
+  }
+  
 }
