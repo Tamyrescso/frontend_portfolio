@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../style/backgroundIcons.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -22,87 +22,84 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 function BackgroundIcons() {
-  function addIconClass(e) {
-    e.target.classList.add('colored')
-  }
 
   const iconRow = (
     <div className="row">
           <div>
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon'  icon={faCarrot} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faMugHot} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faAppleWhole} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faBeer} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faPizzaSlice} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faCakeCandles} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faLemon} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faMartiniGlassCitrus} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faBurger} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faChampagneGlasses} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faCandyCane} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faBreadSlice} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faWineBottle} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faCookie} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faWhiskeyGlass} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faCheese} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faDrumstickBite} />
+            <FontAwesomeIcon className='icon'  icon={faCarrot} />
+            <FontAwesomeIcon className='icon' icon={faMugHot} />
+            <FontAwesomeIcon className='icon' icon={faAppleWhole} />
+            <FontAwesomeIcon className='icon' icon={faBeer} />
+            <FontAwesomeIcon className='icon' icon={faPizzaSlice} />
+            <FontAwesomeIcon className='icon' icon={faCakeCandles} />
+            <FontAwesomeIcon className='icon' icon={faLemon} />
+            <FontAwesomeIcon className='icon' icon={faMartiniGlassCitrus} />
+            <FontAwesomeIcon className='icon' icon={faBurger} />
+            <FontAwesomeIcon className='icon' icon={faChampagneGlasses} />
+            <FontAwesomeIcon className='icon' icon={faCandyCane} />
+            <FontAwesomeIcon className='icon' icon={faBreadSlice} />
+            <FontAwesomeIcon className='icon' icon={faWineBottle} />
+            <FontAwesomeIcon className='icon' icon={faCookie} />
+            <FontAwesomeIcon className='icon' icon={faWhiskeyGlass} />
+            <FontAwesomeIcon className='icon' icon={faCheese} />
+            <FontAwesomeIcon className='icon' icon={faDrumstickBite} />
           </div>
           <div>
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faCarrot} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faMugHot} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faAppleWhole} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faBeer} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faPizzaSlice} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faCakeCandles} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faLemon} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faMartiniGlassCitrus} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faBurger} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faChampagneGlasses} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faCandyCane} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faBreadSlice} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faWineBottle} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faCookie} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faWhiskeyGlass} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faCheese} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faDrumstickBite} />
+            <FontAwesomeIcon className='icon' icon={faCarrot} />
+            <FontAwesomeIcon className='icon' icon={faMugHot} />
+            <FontAwesomeIcon className='icon' icon={faAppleWhole} />
+            <FontAwesomeIcon className='icon' icon={faBeer} />
+            <FontAwesomeIcon className='icon' icon={faPizzaSlice} />
+            <FontAwesomeIcon className='icon' icon={faCakeCandles} />
+            <FontAwesomeIcon className='icon' icon={faLemon} />
+            <FontAwesomeIcon className='icon' icon={faMartiniGlassCitrus} />
+            <FontAwesomeIcon className='icon' icon={faBurger} />
+            <FontAwesomeIcon className='icon' icon={faChampagneGlasses} />
+            <FontAwesomeIcon className='icon' icon={faCandyCane} />
+            <FontAwesomeIcon className='icon' icon={faBreadSlice} />
+            <FontAwesomeIcon className='icon' icon={faWineBottle} />
+            <FontAwesomeIcon className='icon' icon={faCookie} />
+            <FontAwesomeIcon className='icon' icon={faWhiskeyGlass} />
+            <FontAwesomeIcon className='icon' icon={faCheese} />
+            <FontAwesomeIcon className='icon' icon={faDrumstickBite} />
           </div>
           <div>
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faCarrot} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faMugHot} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faAppleWhole} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faBeer} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faPizzaSlice} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faCakeCandles} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faLemon} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faMartiniGlassCitrus} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faBurger} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faChampagneGlasses} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faCandyCane} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faBreadSlice} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faWineBottle} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faCookie} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faWhiskeyGlass} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faCheese} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faDrumstickBite} />
+            <FontAwesomeIcon className='icon' icon={faCarrot} />
+            <FontAwesomeIcon className='icon' icon={faMugHot} />
+            <FontAwesomeIcon className='icon' icon={faAppleWhole} />
+            <FontAwesomeIcon className='icon' icon={faBeer} />
+            <FontAwesomeIcon className='icon' icon={faPizzaSlice} />
+            <FontAwesomeIcon className='icon' icon={faCakeCandles} />
+            <FontAwesomeIcon className='icon' icon={faLemon} />
+            <FontAwesomeIcon className='icon' icon={faMartiniGlassCitrus} />
+            <FontAwesomeIcon className='icon' icon={faBurger} />
+            <FontAwesomeIcon className='icon' icon={faChampagneGlasses} />
+            <FontAwesomeIcon className='icon' icon={faCandyCane} />
+            <FontAwesomeIcon className='icon' icon={faBreadSlice} />
+            <FontAwesomeIcon className='icon' icon={faWineBottle} />
+            <FontAwesomeIcon className='icon' icon={faCookie} />
+            <FontAwesomeIcon className='icon' icon={faWhiskeyGlass} />
+            <FontAwesomeIcon className='icon' icon={faCheese} />
+            <FontAwesomeIcon className='icon' icon={faDrumstickBite} />
           </div>
           <div>
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faCarrot} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faMugHot} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faAppleWhole} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faBeer} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faPizzaSlice} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faCakeCandles} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faLemon} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faMartiniGlassCitrus} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faBurger} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faChampagneGlasses} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faCandyCane} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faBreadSlice} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faWineBottle} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faCookie} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faWhiskeyGlass} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faCheese} />
-            <FontAwesomeIcon onMouseOver={addIconClass} className='icon' icon={faDrumstickBite} />
+            <FontAwesomeIcon className='icon' icon={faCarrot} />
+            <FontAwesomeIcon className='icon' icon={faMugHot} />
+            <FontAwesomeIcon className='icon' icon={faAppleWhole} />
+            <FontAwesomeIcon className='icon' icon={faBeer} />
+            <FontAwesomeIcon className='icon' icon={faPizzaSlice} />
+            <FontAwesomeIcon className='icon' icon={faCakeCandles} />
+            <FontAwesomeIcon className='icon' icon={faLemon} />
+            <FontAwesomeIcon className='icon' icon={faMartiniGlassCitrus} />
+            <FontAwesomeIcon className='icon' icon={faBurger} />
+            <FontAwesomeIcon className='icon' icon={faChampagneGlasses} />
+            <FontAwesomeIcon className='icon' icon={faCandyCane} />
+            <FontAwesomeIcon className='icon' icon={faBreadSlice} />
+            <FontAwesomeIcon className='icon' icon={faWineBottle} />
+            <FontAwesomeIcon className='icon' icon={faCookie} />
+            <FontAwesomeIcon className='icon' icon={faWhiskeyGlass} />
+            <FontAwesomeIcon className='icon' icon={faCheese} />
+            <FontAwesomeIcon className='icon' icon={faDrumstickBite} />
           </div>
         </div>
   )

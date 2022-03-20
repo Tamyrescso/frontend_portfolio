@@ -39,22 +39,11 @@ section {
   .icon:nth-child(even):hover {
   transition:0s;
   color: var(--red);
-  box-shadow: 20px 30px 10px var(--red);
+  filter: drop-shadow(2px 4px 6px var(--red));
   }
 
   .icon:nth-child(odd):hover {
   transition:0s;
-  color: var(--orange);
-  box-shadow: 20px 30px 10px var(--orange);
-  }
-
-  .colored:nth-child(even) {
-  color: var(--red);
-  filter: drop-shadow(2px 4px 6px var(--red));
-  }
-  
-
-  .colored:nth-child(odd) {
   color: var(--orange);
   filter: drop-shadow(2px 4px 6px var(--orange));
   }
