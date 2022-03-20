@@ -1,0 +1,77 @@
+.abilities {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+}
+.mainAbilities {
+  height: 340vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: center;
+  justify-content: space-around;
+  align-items: center;
+  margin: 7vh auto;
+}
+
+#cssCard, #githubCard, #htmlCard, #JSCard, #mysqlCard, #nodeCard, #reactCard, #reduxCard {
+  width: 40vh;
+  height: 40vh;
+  border-radius: 5%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+#cssCard {
+  background-color: #F2ECFF;
+}
+
+#githubCard {
+  background-color: #FFE9E9;
+}
+
+#htmlCard {
+  background-color: #FADDB0;
+}
+
+#JSCard {
+  background-color: #F4ECCA;
+}
+
+#mysqlCard {
+  background-color: #D0EBEC ;
+}
+
+#nodeCard {
+  background-color: #d4fad4;
+}
+
+#reactCard {
+  background-color: #D0E6FF;
+}
+
+#reduxCard {
+  background-color: #c7c2c2;
+}
+
+@media (orientation: landscape) {
+  .abilities {
+    overflow-y: hidden;
+  }
+  
+  .mainAbilities {
+    height: fit-content;
+    width: 70%;
+    margin: auto;
+  }
+
+  #cssCard, #githubCard, #htmlCard, #JSCard, #mysqlCard, #nodeCard, #reactCard, #reduxCard {
+    width: 20%;
+    height: 30%;
+    margin: 2vh;
+  }
+
+  #cssCard:hover, #githubCard:hover, #htmlCard:hover, #JSCard:hover, #mysqlCard:hover, #nodeCard:hover, #reactCard:hover, #reduxCard:hover {
+    transform: scale(1.1);
+  }
+}
