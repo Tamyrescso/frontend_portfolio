@@ -1,13 +1,13 @@
 :root {
   --shadow: #888683cb;
   --gold-lighter: #deb5549a;
-  --white-primary: #f1ebeb;
+  --white-primary: #e7e7de;
   --black-primary: #312f2f;
-  --background: #faf8ea;
+  --background: #fffaf0;
   --glass: #ffffff26;
   --red: #ff1e00;
-  --orange: #ff8800;
-  --title: 'Sacramento', cursive;
+  --orange: #ff7300;
+  --title: 'Yellowtail', cursive;
   --paragraph: 'Vollkorn', serif;
 }
 
