@@ -63,14 +63,34 @@
     height: fit-content;
     width: 70%;
     margin: auto;
+    animation: containerOnload 1s normal ease-in;
   }
-
+  
   #cssCard, #githubCard, #htmlCard, #JSCard, #mysqlCard, #nodeCard, #reactCard, #reduxCard {
     width: 20%;
     height: 30%;
     margin: 2vh;
+    animation: skillsOnload 1s normal ease-in;
   }
 
+  @keyframes containerOnload {
+    0% {
+      transform: translateX(-20%) ;
+    }
+    50%{
+      transform: translateX(5%);
+    }
+    100%{
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes skillsOnload {
+    0% {
+      transform: scale(.8);
+    }
+  }
+  
   #cssCard:hover, #githubCard:hover, #htmlCard:hover, #JSCard:hover, #mysqlCard:hover, #nodeCard:hover, #reactCard:hover, #reduxCard:hover {
     transform: scale(1.1);
   }
