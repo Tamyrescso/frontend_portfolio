@@ -3,8 +3,6 @@ import '../style/book.css';
 import arabesque from '../images/arabesco_book.svg';
 import me from '../images/me.png';
 import PortfolioContext from '../context/PortfolioContext';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
 
 function Book() {
   const [bookClass, setBookClass] = useState('book');
