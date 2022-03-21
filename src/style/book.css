@@ -7,7 +7,7 @@
   cursor: pointer;
   backface-visibility: visible;
   z-index: 1;
-  top: calc((100vh - 130vw)/2);
+  top: calc(50vh - 65vw);
   overflow-x: scroll;
 }
 
@@ -233,7 +233,7 @@
 @media (orientation: landscape) {
   .book {
     width: 100vh;
-    left: calc((100vw - 100vh)/2);
+    left: calc(50vw - 50vh);
     height: 70%;
     top: 15%;
     overflow-x: hidden;
