@@ -5,7 +5,7 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Abilities from './pages/Abilities';
 import NotFound from './pages/NotFound';
-import './style/app.css';
+import './app.css';
 
 function App() {
   return (
