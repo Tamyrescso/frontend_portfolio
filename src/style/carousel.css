@@ -1,0 +1,184 @@
+* {box-sizing:border-box}
+
+.carouselContainer {
+  width: 100vw;
+  height: 85vh;
+  position: relative;
+  margin: auto;
+}
+
+.carouselItem {
+  display: none;
+}
+
+.showItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.showItem .cover {
+  width: 100%;
+  height: 100%;
+  margin-top: 2vh;
+  animation-name: open;
+  animation-duration: 2s;
+  transform: rotate(50deg) translate(25%, -120%);
+  z-index: 1;
+}
+
+.showItem .projectImg {
+  animation: show 0s .5s forwards;
+  transition: 1s;
+  opacity: 0;
+  width: 95%;
+  position: absolute;
+  top: 12vh;
+  z-index: 0;
+}
+
+@keyframes show {
+  50% {
+      opacity: .5;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes open {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(50deg) translate(25%, -120%);}
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  width: fit-content;
+  margin-top: -22px;
+  padding: 2vh;
+  color: var(--orange);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  background-color: transparent;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.projectTitle {
+  color: #141111;
+  text-align: center;
+  margin-top: 2vh;
+  font-family: var(--title);
+  width: 100vw;
+  z-index: 2;
+text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+            10px 20px 5px rgba(0,0,0,0.05),
+            -10px 20px 5px rgba(0,0,0,0.05);
+}
+
+.numbertext {
+  color: #0f0c0c;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  align-self: flex-start;
+}
+
+.text {
+  text-align: center;
+  margin: 2vh;
+  font-family: var(--paragraph);
+  height: 30vh;
+}
+
+.text a {
+  color: rgb(31, 29, 29);
+  text-shadow: 2px 5px 0.5 #0f0c0c;
+  text-decoration: none;
+  font-weight: bolder;
+  padding: 1.2vh;
+  background-color: var(--white-primary);
+  border-radius: 4%;
+  box-shadow: rgba(247, 14, 6, 0.3) 0px 0px 0px 3px;
+}
+
+.text a:hover {
+  background-color: #141111;
+  color: var(--orange);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@media (orientation: landscape) {
+  .carouselContainer {
+    width: 70vw;
+    height: 85vh;
+  }
+
+  .numbertext {
+    font-size: 2vh;
+  }
+
+  .projectTitle {
+    font-size: 6vh;
+  }
+
+  .prev, .next {
+    height: 20%;
+    width: 7%;
+    top: 35%;
+    z-index: 5;
+    margin: 1%;
+  }
+
+  .prev {
+    border-radius: 5% 30%;
+  }
+
+  .next {
+    border-radius: 30% 5%;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .controlProject {
+    font-size: 4vh;
+  }
+
+  .showItem .cover {
+    width: 60%;
+  }
+
+  .text {
+    font-size: 2.5vh;
+    margin-top: 3vh;
+  }
+
+  .showItem .projectImg {
+    width: 65%;
+    border-radius: 2%;
+  }
+}
