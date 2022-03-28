@@ -22,7 +22,8 @@ function ContactForm() {
     const validate = validationForm(fields);
     if(validate) return alert(validate.error);
 
-    const { message } = await sendMessage(fields);
+    const { data } = await sendMessage(fields);
+    const { message } = data;
     return alert(message);
   }
   return (
