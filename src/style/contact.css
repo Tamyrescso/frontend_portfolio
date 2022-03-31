@@ -1,3 +1,44 @@
+.contactPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .mainContact {
-  height: 100vh;
+  height: 86vh;
+  width: 100%;
+  margin-top: 7vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.linkTitle {
+  font-family: var(--title);
+  text-align: center;
+  font-size: 5.5vh;
+  width: 100%;
+}
+
+.containerLinks {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.myLinks {
+  font-size: 7vh;
+  filter: drop-shadow(4px 4px 1px var(--red));
+}
+
+.myLinks:hover {
+  cursor: pointer;
+  transform: scale(0.8);
+}
+
+@media (orientation: landscape) {
+  .mainContact {
+    width: 50vw;
+  }
 }
