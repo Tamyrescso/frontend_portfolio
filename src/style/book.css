@@ -5,7 +5,7 @@
   height: 130vw;
   width: 100vw;
   cursor: pointer;
-  backface-visibility: visible;
+  backface-visibility: hidden;
   z-index: 1;
   top: calc(50vh - 65vw);
   overflow-x: scroll;
