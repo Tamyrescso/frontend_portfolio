@@ -97,8 +97,8 @@
   }
   
   .logo:hover {
-    transform: rotateZ(360deg);
-    transition: 1s;
+    filter: drop-shadow(6px 6px 2px red);
+    transform: scale(0.8);
   }
   
 }
