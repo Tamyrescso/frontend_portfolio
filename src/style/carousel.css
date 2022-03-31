@@ -2,7 +2,7 @@
 
 .carouselContainer {
   width: 100vw;
-  height: 85vh;
+  height: 86vh;
   position: relative;
   margin: auto;
 }
@@ -14,28 +14,67 @@
 .showItem {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  position: relative;
+  height: 100%;
 }
 
-.showItem .cover {
+.numbertext {
+  color: #0f0c0c;
+  font-size: 2vh;
+  height: 5%;
+  width: 15%;
+  padding: 2%;
+  text-align: center;
+  align-self: flex-start;
+}
+
+.projectTitle {
+  color: #141111;
+  text-align: center;
+  font-family: var(--title);
+  width: 100vw;
+  height: 10%;
+  z-index: 2;
+  font-size: 35px;
+  text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+            10px 20px 5px rgba(0,0,0,0.05),
+            -10px 20px 5px rgba(0,0,0,0.05);
+}
+
+.cover {
   width: 100%;
-  height: 100%;
-  margin-top: 2vh;
+  height: 40%;
+  top: 15%;
   animation-name: open;
   animation-duration: 2s;
-  transform: rotate(50deg) translate(25%, -120%);
+  position: absolute;
   z-index: 1;
+  transform: rotate(50deg) translate(25%, -120%);
 }
 
-.showItem .projectImg {
+@keyframes open {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(50deg) translate(25%, -120%);}
+}
+
+.showItem .projectGif, .showItem .recipesGif {
   animation: show 0s .5s forwards;
   transition: 1s;
   opacity: 0;
-  width: 95%;
-  position: absolute;
-  top: 12vh;
-  z-index: 0;
+  border-radius: 5%;
+  margin-bottom: 2%;
+}
+
+.showItem .projectGif {
+  width: 97%;
+  height: 40%;
+}
+
+.showItem .recipesGif {
+  width: 50%;
+  height: 50%;
 }
 
 @keyframes show {
@@ -47,9 +86,41 @@
   }
 }
 
-@keyframes open {
-  from {transform: rotate(0deg);}
-  to {transform: rotate(50deg) translate(25%, -120%);}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.text {
+  text-align: center;
+  margin: 0 1vh;
+  font-family: var(--paragraph);
+  height: 32%;
+  overflow-y: scroll;
+}
+
+.text p {
+  font-size: 20px;
+}
+
+.linkWrapper {
+  height: 9%;
+}
+
+.repoLink {
+  filter: drop-shadow(2px 4px 6px var(--red));
+  color: rgb(31, 29, 29);
+  font-size: 6vh;
+}
+
+.repoLink:hover {
+  color: var(--orange);
+  filter: drop-shadow(2px 4px 6px var(--back-primary));
 }
 
 .prev, .next {
@@ -76,78 +147,19 @@
   background-color: rgba(0,0,0,0.8);
 }
 
-.projectTitle {
-  color: #141111;
-  text-align: center;
-  margin-top: 2vh;
-  font-family: var(--title);
-  width: 100vw;
-  z-index: 2;
-text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
-            10px 20px 5px rgba(0,0,0,0.05),
-            -10px 20px 5px rgba(0,0,0,0.05);
-}
-
-.numbertext {
-  color: #0f0c0c;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-  align-self: flex-start;
-}
-
-.text {
-  text-align: center;
-  margin: 2vh;
-  font-family: var(--paragraph);
-  height: 30vh;
-}
-
-.text a {
-  color: rgb(31, 29, 29);
-  text-shadow: 2px 5px 0.5 #0f0c0c;
-  text-decoration: none;
-  font-weight: bolder;
-  padding: 1.2vh;
-  background-color: var(--white-primary);
-  border-radius: 4%;
-  box-shadow: rgba(247, 14, 6, 0.3) 0px 0px 0px 3px;
-}
-
-.text a:hover {
-  background-color: #141111;
-  color: var(--orange);
-}
-
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
 @media (orientation: landscape) {
   .carouselContainer {
-    width: 70vw;
-    height: 85vh;
-  }
-
-  .numbertext {
-    font-size: 2vh;
+    width: 60vw;
   }
 
   .projectTitle {
-    font-size: 6vh;
+    font-size: 60px;
   }
 
   .prev, .next {
     height: 20%;
     width: 7%;
-    top: 35%;
+    top: 40%;
     z-index: 5;
     margin: 1%;
   }
@@ -170,15 +182,23 @@ text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
 
   .showItem .cover {
     width: 60%;
+    height: 50%;
   }
 
   .text {
     font-size: 2.5vh;
-    margin-top: 3vh;
+    overflow-y: auto;
+    height: 20%;
+    width: 65%;
   }
 
-  .showItem .projectImg {
+  .showItem .projectGif {
     width: 65%;
+    height: 60%;
     border-radius: 2%;
+  }
+
+  .showItem .recipesGif {
+    width: 25%;
   }
 }

@@ -1,13 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import ptProjects from '../data/projectsData';
+import React, { useEffect, useState, useContext } from 'react';
+import { ptProjects, enProjects } from '../data/projectsData';
 import cover from '../images/food_cover.png';
 import '../style/carousel.css';
+import PortfolioContext from '../context/PortfolioContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesLeft, faAnglesRight } from '@fortawesome/free-solid-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab, faGithub } from '@fortawesome/free-brands-svg-icons';
 
+library.add(fab);
 
 function Carousel() {
-  const [slideIndex, setSlideIndex] = useState(1)  
+  const [slideIndex, setSlideIndex] = useState(1);
+  const { language } = useContext(PortfolioContext);
   
   useEffect(() => {
     showSlides(slideIndex);
@@ -22,33 +27,38 @@ function Carousel() {
   if ((slideIndex + n) > slides.length+1) return setSlideIndex(1)
   if ((slideIndex + n) < 1) return setSlideIndex(slides.length+1)
   setSlideIndex(slideIndex + n);
-}
-
-function showSlides(n) {
-  let slides = document.getElementsByClassName('carouselItem');
-  let previousSlide = document.querySelector('.showItem');
-  if (slides.length) {
-    if (previousSlide !== null) {
-      previousSlide.classList.remove('showItem')
-      previousSlide.classList.add('carouselItem')
-    }
-    slides[slideIndex-1].classList.add('showItem');
-    slides[slideIndex-1].classList.remove('carouselItem');
   }
-}
+
+  function showSlides(n) {
+    let slides = document.getElementsByClassName('carouselItem');
+    let previousSlide = document.querySelector('.showItem');
+    if (slides.length) {
+      if (previousSlide !== null) {
+        previousSlide.classList.remove('showItem')
+        previousSlide.classList.add('carouselItem')
+      }
+      slides[slideIndex-1].classList.add('showItem');
+      slides[slideIndex-1].classList.remove('carouselItem');
+    }
+  }
+
+  const projectsDescriptions = language === 'pt'? ptProjects : enProjects;
   return (
     <div className='carouselContainer'>
-      {ptProjects.map(({ title, description, repo, image }, index, array) => {
+      {projectsDescriptions.map(({ title, description, repo, gif }, index, array) => {
         return (
           <div key={title} className='carouselItem fade'>
             <div className='numbertext'>{`${index+1} / ${array.length}`}</div>
             <h1 className='projectTitle'>{title}</h1>
             <img className='cover'src={cover} alt='a metallic food cover'/>
-            <img className='projectImg'src={image} alt='a screenshot of the project'/>
+            <img className={ gif.includes('recipes_app') ? 'recipesGif' : 'projectGif' }src={gif} alt='a gif of the project'/>
             <div className='text'>
               <p>{description}</p>
-              <br></br>
-              <a href={repo}>Link do repositório!</a>
+            </div>
+            <div className='linkWrapper'>
+              <a href={repo} className='repoLink'>
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
             </div>
           </div>
         )
