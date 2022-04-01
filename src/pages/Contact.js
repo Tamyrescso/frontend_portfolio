@@ -11,29 +11,20 @@ import { fab, faGithub, faFacebook, faLinkedin } from '@fortawesome/free-brands-
 library.add(fab);
 
 function Contact() {
-  const { language } = useContext(PortfolioContext);
-
-  const ptTitle = (
-    <h2 className='linkTitle'>Contato</h2>
-  );
-
-  const enTitle = (
-    <h2 className='linkTitle'>Contact</h2>
-  );
+  const { darkTheme } = useContext(PortfolioContext);
   return (
     <div className='contactPage'>
       <Header/>
       <div className='mainContact'>
-        {language === 'pt'? ptTitle : enTitle}
         <ContactForm />
         <div className='containerLinks'>
-        <a className='myLinks' href='https://github.com/Tamyrescso' target="_blank" rel="noreferrer">
+        <a className={darkTheme? 'myLinksDark' : 'myLinks'} href='https://github.com/Tamyrescso' target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faGithub}/>
         </a>
-        <a className='myLinks' href='https://www.facebook.com/tamyres.caroline' target="_blank" rel="noreferrer">
+        <a className={darkTheme? 'myLinksDark' : 'myLinks'} href='https://www.facebook.com/tamyres.caroline' target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faFacebook}/>
         </a>
-        <a className='myLinks' href='https://www.linkedin.com/in/tcso/' target="_blank" rel="noreferrer">
+        <a className={darkTheme? 'myLinksDark' : 'myLinks'} href='https://www.linkedin.com/in/tcso/' target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faLinkedin}/>
         </a>
         </div>

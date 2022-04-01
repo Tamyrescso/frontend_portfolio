@@ -12,14 +12,16 @@
 
 label {
   font-family: var(--title);
-  margin-left: 2vw;
+  margin-left: 1vw;
   font-size: 3vh;
+  color: var(--orange);
 }
 
 #name, #email, #message {
   width: 100%; 
   padding: 5px;
   border: 1px solid #ccc;
+  background-color: #dbe2db;
   border-radius: 4px; 
   box-sizing: border-box;
   margin-top: 6px; 
@@ -30,7 +32,7 @@ label {
 
 input[type=submit] {
   background-color: #4CAF50;
-  color: white;
+  color: rgb(248, 244, 244);
   padding: 8px 15px;
   border: none;
   border-radius: 4px;

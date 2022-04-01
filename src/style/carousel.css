@@ -147,6 +147,16 @@
   background-color: rgba(0,0,0,0.8);
 }
 
+.numberTextDark, .projectTitleDark, .textDark, .repoLinkDark {
+  color: var(--white-primary);
+}
+
+.projectTitleDark {
+  text-shadow: 0px 15px 5px rgba(221, 212, 212, 0.082),
+            10px 20px 5px rgba(192, 182, 182, 0.055),
+            -10px 20px 5px rgba(138, 133, 133, 0.041);
+}
+
 @media (orientation: landscape) {
   .carouselContainer {
     width: 60vw;

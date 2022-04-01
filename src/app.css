@@ -11,17 +11,28 @@
   --paragraph: 'Vollkorn', serif;
 }
 
-body {
+.appLight, .appDark {
   height: 100vh;
   position: relative;
-  background-image: url('./images/backgroundHome_cel.png');
   background-position: center;
   background-size: cover;
   width: 100vw;
 }
 
+.appLight {
+  background-image: url('./images/backgroundLight_cel.png');
+}
+
+.appDark {
+  background-image: url('./images/backgroundDark_cel.png');
+}
+
 @media (orientation:landscape) {
-  body {
-  background-image: url('./images/background_home.png');  
+  .appLight {
+  background-image: url('./images/backgroundLight.png');  
   }
+
+  .appDark {
+    background-image: url('./images/backgroundDark.png');  
+    }
 }

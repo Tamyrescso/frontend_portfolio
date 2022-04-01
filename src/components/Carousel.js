@@ -12,7 +12,7 @@ library.add(fab);
 
 function Carousel() {
   const [slideIndex, setSlideIndex] = useState(1);
-  const { language } = useContext(PortfolioContext);
+  const { language, darkTheme } = useContext(PortfolioContext);
   
   useEffect(() => {
     showSlides(slideIndex);
@@ -48,15 +48,15 @@ function Carousel() {
       {projectsDescriptions.map(({ title, description, repo, gif }, index, array) => {
         return (
           <div key={title} className='carouselItem fade'>
-            <div className='numbertext'>{`${index+1} / ${array.length}`}</div>
-            <h1 className='projectTitle'>{title}</h1>
+            <div className={ darkTheme? 'numbertext numberTextDark' : 'numberText' }>{`${index+1} / ${array.length}`}</div>
+            <h1 className={ darkTheme? 'projectTitle projectTitleDark' : 'projectTitle' }>{title}</h1>
             <img className='cover'src={cover} alt='a metallic food cover'/>
             <img className={ gif.includes('recipes_app') ? 'recipesGif' : 'projectGif' }src={gif} alt='a gif of the project'/>
             <div className='text'>
-              <p>{description}</p>
+              <p className={ darkTheme? 'textDark' : '' }>{description}</p>
             </div>
             <div className='linkWrapper'>
-              <a href={repo} target="_blank" className='repoLink' rel="noreferrer">
+              <a href={repo} target="_blank" className={ darkTheme? 'repoLink repoLinkDark' : 'repoLink' } rel="noreferrer">
                 <FontAwesomeIcon icon={faGithub} />
               </a>
             </div>

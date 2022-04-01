@@ -13,13 +13,6 @@
   align-items: center;
 }
 
-.linkTitle {
-  font-family: var(--title);
-  text-align: center;
-  font-size: 5.5vh;
-  width: 100%;
-}
-
 .containerLinks {
   display: flex;
   justify-content: space-evenly;
@@ -33,7 +26,13 @@
   color: var(--black-primary);
 }
 
-.myLinks:hover {
+.myLinksDark {
+  font-size: 7vh;
+  filter: drop-shadow(4px 4px 1px var(--red));
+  color: var(--white-primary);
+}
+
+.myLinks:hover, .myLinksDark:hover {
   cursor: pointer;
   transform: scale(0.8);
 }

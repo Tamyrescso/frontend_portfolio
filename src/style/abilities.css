@@ -15,44 +15,78 @@
   margin: 7vh auto;
 }
 
-#cssCard, #githubCard, #htmlCard, #JSCard, #mysqlCard, #nodeCard, #reactCard, #reduxCard {
+.cssCard, .githubCard, .htmlCard, .JSCard, .mysqlCard, .nodeCard, .reactCard, .reduxCard {
   width: 40vh;
   height: 40vh;
   border-radius: 5%;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-#cssCard {
-  background-color: #F2ECFF;
+.cssCard {
+  background-color: #f2ecff;
 }
 
-#githubCard {
+.githubCard {
   background-color: #FFE9E9;
 }
 
-#htmlCard {
+.htmlCard {
   background-color: #FADDB0;
 }
 
-#JSCard {
+.JSCard {
   background-color: #F4ECCA;
 }
 
-#mysqlCard {
+.mysqlCard {
   background-color: #D0EBEC ;
 }
 
-#nodeCard {
+.nodeCard {
   background-color: #d4fad4;
 }
 
-#reactCard {
+.reactCard {
   background-color: #D0E6FF;
 }
 
-#reduxCard {
+.reduxCard {
   background-color: #c7c2c2;
 }
+
+/*dark backgrounds*/
+.darkCss {
+  background-color: #7254b3b2;
+}
+
+.darkGithub {
+  background-color: #b98d8dc4;
+}
+
+.darkHtml {
+  background-color: #c4944dc0;
+}
+
+.darkJS {
+  background-color: #ccb653d8;
+}
+
+.darkMysql {
+  background-color: #55a9acdc ;
+}
+
+.darkNode {
+  background-color: #5cbb5cd3;
+}
+
+.darkReact {
+  background-color: #5e89b9ce;
+}
+
+.darkRedux {
+  background-color: #928c8cda;
+}
+
 
 @media (orientation: landscape) {
   .abilities {
@@ -66,7 +100,7 @@
     animation: containerOnload 1s normal ease-in;
   }
   
-  #cssCard, #githubCard, #htmlCard, #JSCard, #mysqlCard, #nodeCard, #reactCard, #reduxCard {
+  .cssCard, .githubCard, .htmlCard, .JSCard, .mysqlCard, .nodeCard, .reactCard, .reduxCard {
     width: 20%;
     height: 30%;
     margin: 2vh;
@@ -91,7 +125,7 @@
     }
   }
   
-  #cssCard:hover, #githubCard:hover, #htmlCard:hover, #JSCard:hover, #mysqlCard:hover, #nodeCard:hover, #reactCard:hover, #reduxCard:hover {
+  .cssCard:hover, .githubCard:hover, .htmlCard:hover, .JSCard:hover, .mysqlCard:hover, .nodeCard:hover, .reactCard:hover, .reduxCard:hover {
     transform: scale(1.1);
   }
 }

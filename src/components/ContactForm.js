@@ -10,7 +10,7 @@ function ContactForm() {
     email: '',
     message: ''
   });
-  const { language } = useContext(PortfolioContext);
+  const { language, darkTheme } = useContext(PortfolioContext);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
