@@ -56,7 +56,7 @@ function Carousel() {
               <p>{description}</p>
             </div>
             <div className='linkWrapper'>
-              <a href={repo} className='repoLink'>
+              <a href={repo} target="_blank" className='repoLink' rel="noreferrer">
                 <FontAwesomeIcon icon={faGithub} />
               </a>
             </div>

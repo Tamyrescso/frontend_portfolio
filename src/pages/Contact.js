@@ -27,9 +27,15 @@ function Contact() {
         {language === 'pt'? ptTitle : enTitle}
         <ContactForm />
         <div className='containerLinks'>
-          <FontAwesomeIcon className='myLinks github' icon={faGithub}/>
-          <FontAwesomeIcon className='myLinks facebook' icon={faFacebook}/>
-          <FontAwesomeIcon className='myLinks linkedin' icon={faLinkedin}/>
+        <a className='myLinks' href='https://github.com/Tamyrescso' target="_blank" rel="noreferrer">
+          <FontAwesomeIcon icon={faGithub}/>
+        </a>
+        <a className='myLinks' href='https://www.facebook.com/tamyres.caroline' target="_blank" rel="noreferrer">
+          <FontAwesomeIcon icon={faFacebook}/>
+        </a>
+        <a className='myLinks' href='https://www.linkedin.com/in/tcso/' target="_blank" rel="noreferrer">
+          <FontAwesomeIcon icon={faLinkedin}/>
+        </a>
         </div>
       </div>
       <Footer/>
