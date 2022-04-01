@@ -2,11 +2,12 @@ import React, { useState, useContext } from 'react';
 import '../style/book.css';
 import arabesque from '../images/arabesco_book.svg';
 import me from '../images/me.png';
+import darkMe from '../images/darkMe.png';
 import PortfolioContext from '../context/PortfolioContext';
 
 function Book() {
   const [bookClass, setBookClass] = useState('book');
-  const { language } = useContext(PortfolioContext);
+  const { language, darkTheme } = useContext(PortfolioContext);
 
   const changeBookClass = () => {
     bookClass === 'book' ? setBookClass('book bookSelected') : setBookClass('book');
@@ -45,15 +46,15 @@ function Book() {
   return (
     <div className={bookClass} onClick={changeBookClass}>
       <div className="back"></div>
-      <div className="page6"></div>
-      <div className="page5"></div>
-      <div className="page4">
+      <div className={ darkTheme? "page6 page6Dark" : "page6" }></div>
+      <div className={ darkTheme? "page5 page5Dark" : "page5" }></div>
+      <div className={ darkTheme? "page4 page4Dark" : "page4" }>
         {language === 'pt'? sobre : about}
       </div>
-      <div className="page3"></div>
-      <div className="page2"></div>
-      <div className="page1">
-        <img className='myPic' src={me} alt='minha foto'/>
+      <div className={ darkTheme? "page3 page3Dark" : "page3" }></div>
+      <div className={ darkTheme? "page2 page2Dark" : "page2" }></div>
+      <div className={ darkTheme? "page1 page1Dark" : "page1" }>
+        <img className='myPic' src={darkTheme? darkMe : me } alt='minha foto'/>
       </div>
       <div className="front">
         <img className='arabesque' src={arabesque} alt="enfeite da capa do livro"/>

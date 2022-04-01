@@ -3,7 +3,7 @@ section {
   position:relative;
   width: 100vw;
   height:100vh;
-  background: var(--background);
+  background: var(--black-primary);
   display:flex;
   flex-direction: column;
   overflow:hidden;
@@ -30,7 +30,7 @@ section {
   }
   
   .icon {
-  color: var(--background);
+  color: var(--black-primary);
   transition: 1s;
   padding:2%;
   user-select:none;

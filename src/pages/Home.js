@@ -9,7 +9,6 @@ function Home() {
     <div>
       <Header/>
       <Book/>
-      {/* <BackgroundIcons/> */}
       <Footer/>
     </div>
   )
