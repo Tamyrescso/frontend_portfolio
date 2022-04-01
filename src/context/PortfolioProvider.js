@@ -3,6 +3,7 @@ import PortfolioContext from './PortfolioContext';
 
 function PortfolioProvider({ children }) {
   const [language, setLanguage] = useState('pt');
+  const [darkTheme, setDarkTheme] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
 
@@ -11,6 +12,8 @@ function PortfolioProvider({ children }) {
     language,
     setShowMenu,
     showMenu,
+    darkTheme,
+    setDarkTheme,
   }
   return (
     <PortfolioContext.Provider value={ values }>

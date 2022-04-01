@@ -30,17 +30,80 @@
   display: none;
 }
 
+.changeButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 34vh;
+  height: 7vh;
+}
+
+.switchWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sun, .moon{
+  width: 5vh;
+}
+
+.switch {
+  margin-right: 1vh;
+  height: 32px;
+  width: 52px;
+  border-radius: 16px;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  border: 2px solid #ebc72a;
+  background: linear-gradient(180deg, #ddc01e 0%, #ebc72a 100%);
+  transition: all .2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+
+.switch:focus {
+  outline: 0;
+}
+
+.switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  background: rgb(49, 41, 41);
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(44,44,44,.2);
+  transition: all .2s cubic-bezier(.5,.1,.75,1.35);
+}
+
+.switch:checked {
+  border-color: rgb(17, 19, 18);
+  background: linear-gradient(180deg, #2D2F39 0%, #1F2027 100%);
+}
+
+.switch:checked::after {
+  transform: translatex(20px);
+  background: white;
+}
+
 .languages {
   margin: .5em;
   width: 15vh;
   height: 100%;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
 .brazil, .usa{
+  cursor: pointer;
   margin: 1vh;
   width: 32%;
   height: 60%;
@@ -59,6 +122,7 @@
   .navBar {
     display: flex;
     justify-content: space-between;
+    justify-self: center;
     width: 40vw;
   }
   
@@ -93,6 +157,7 @@
   .logo {
     display: block;
     width: 7vh;
+    margin-right: 27vh;
     margin-left: .5em;
   }
   

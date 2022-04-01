@@ -4,6 +4,8 @@ import darkLogo from '../images/logo_dark.svg';
 import PortfolioContext from '../context/PortfolioContext';
 import brazil from '../images/brasil.png';
 import usa from '../images/eua.png';
+import moon from '../images/moon.png';
+import sun from '../images/sun.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import MenuBurguer from './MenuBurguer';
@@ -14,11 +16,18 @@ function Header() {
     setLanguage,
     language,
     setShowMenu,
-    showMenu } = useContext(PortfolioContext);
+    showMenu,
+    darkTheme,
+    setDarkTheme } = useContext(PortfolioContext);
 
   function changeLanguage(e) {
     const { id } = e.target;
     setLanguage(id);
+  }
+
+  function changeTheme(e) {
+    const { checked } = e.target;
+    setDarkTheme(checked);
   }
 
   const ptHeader = (
@@ -86,11 +95,18 @@ function Header() {
         <img className='logo' src={darkLogo} alt="logo"/>
       </Link>
       {language === 'pt'? ptHeader : enHeader}
-      <div className='languages'>
-        <img onClick={ changeLanguage } id='pt' className='brazil' src={ brazil } alt='brazil flag'/>
-        <img onClick={ changeLanguage } id='en' className='usa' src={ usa } alt='usa flag'/>
+      <div className='changeButtons'>
+        <div className="switchWrapper">
+          <img className='sun' src={ sun } alt='a small sun with a cloud'/>
+          <input type="checkbox" className="switch" onChange={ changeTheme } checked={ darkTheme }/>
+          <img className='moon' src={ moon } alt='a small moon with stars'/>
+        </div>
+        <div className='languages'>
+          <img onClick={ changeLanguage } id='pt' className='brazil' src={ brazil } alt='brazil flag'/>
+          <img onClick={ changeLanguage } id='en' className='usa' src={ usa } alt='usa flag'/>
+        </div>
       </div>
-    </div>
+      </div>
   )
 }
 
