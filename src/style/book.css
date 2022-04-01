@@ -174,12 +174,11 @@
   text-align: left;
   padding: 0 7%;
 }
-@media (max-width: 902px) and (min-width: 555px) {
+@media (max-width: 902px) and (min-width: 500px) {
   .book {
     width: 100vw;
-    left: 50vw;
-    height: 70vh;
-    top: 15%;
+    height: 140vw;
+    top: calc((100vh - 140vw)/2);
   }
 
   .front, .back, .page1, .page2, .page3, .page4, .page5, .page6 {
