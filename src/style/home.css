@@ -3,17 +3,3 @@
   padding:0;
   overflow: hidden;
 }
-
-body {
-  position: relative;
-  background-image: url('../images/backgroundHome_cel.png');
-  background-position: center;
-  background-size: cover;
-  width: 100vw;
-}
-
-@media (orientation:landscape) {
-  body {
-  background-image: url('../images/background_home.png');  
-  }
-}
