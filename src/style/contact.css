@@ -30,6 +30,7 @@
 .myLinks {
   font-size: 7vh;
   filter: drop-shadow(4px 4px 1px var(--red));
+  color: var(--black-primary);
 }
 
 .myLinks:hover {
