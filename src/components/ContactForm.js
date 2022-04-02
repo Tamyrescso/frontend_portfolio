@@ -37,7 +37,12 @@ function ContactForm() {
     setHandleAlert('openAlert');
     const { data } = await sendMessage(fields, language);
     const { message } = data;
-    return setAlertText(message);
+    setAlertText(message);
+    return setFields({
+      name: '',
+      email: '',
+      message: ''
+    })
   }
 
   const ptForm = (
