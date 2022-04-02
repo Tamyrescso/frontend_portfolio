@@ -8,7 +8,7 @@
   backface-visibility: hidden;
   z-index: 1;
   top: calc(50vh - 65vw);
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 *:after { 
@@ -61,6 +61,10 @@
 
 .page1Dark, .page2Dark, .page3Dark, .page4Dark, .page5Dark, .page6Dark {
   background: url('../images/darkPage.png');
+}
+
+.page4, .page4Dark {
+  overflow-y: auto;
 }
 
 .bookSelected .front:after {
@@ -151,18 +155,18 @@
 
 .aboutTitle {
   font-family: var(--title);
-  font-size: 4vh;
+  font-size: 35px;
   color: #500c0c;
   text-align: center;
-  padding: 5%;
+  padding: 2%;
 }
 
 .aboutText {
   font-family: var(--paragraph);
-  font-size: 1.8vh;
+  font-size: 20px;
   color: #500c0c;
   text-align: left;
-  padding: 0 7%;
+  padding: 0 5%;
 }
 @media (max-width: 902px) and (min-width: 500px) {
   .book {
