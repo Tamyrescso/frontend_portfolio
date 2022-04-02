@@ -48,7 +48,7 @@ function Carousel() {
       {projectsDescriptions.map(({ title, description, repo, gif }, index, array) => {
         return (
           <div key={title} className='carouselItem fade'>
-            <div className={ darkTheme? 'numbertext numberTextDark' : 'numberText' }>{`${index+1} / ${array.length}`}</div>
+            <div className={ darkTheme? 'numberText numberTextDark' : 'numberText' }>{`${index+1} / ${array.length}`}</div>
             <h1 className={ darkTheme? 'projectTitle projectTitleDark' : 'projectTitle' }>{title}</h1>
             <img className='cover'src={cover} alt='a metallic food cover'/>
             <img className={ gif.includes('recipes_app') ? 'recipesGif' : 'projectGif' }src={gif} alt='a gif of the project'/>
