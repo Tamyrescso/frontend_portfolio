@@ -56,7 +56,7 @@ function Book() {
       <div className={ darkTheme? "page1 page1Dark" : "page1" }>
         <img className='myPic' src={darkTheme? darkMe : me } alt='minha foto'/>
       </div>
-      <div className="front">
+      <div className={ darkTheme? "front frontDark" : "front" }>
         <img className='arabesque' src={arabesque} alt="enfeite da capa do livro"/>
         {language === 'pt'? capa : cover}
       </div>
