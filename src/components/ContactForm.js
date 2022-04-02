@@ -24,17 +24,18 @@ function ContactForm() {
   const handleClick = async (e) => {
     e.preventDefault();
 
-    const validate = validationForm(fields);
+    const validate = validationForm(fields, language);
     if(validate) {
       setType('error')
       setAlertText(validate.error);
       return setHandleAlert('openAlert');
     }
-
+    
+    const sending = language === 'pt'? 'Enviando mensagem...' : 'Sending message...';
     setType('success')
-    setAlertText('Sending Message...');
+    setAlertText(sending);
     setHandleAlert('openAlert');
-    const { data } = await sendMessage(fields);
+    const { data } = await sendMessage(fields, language);
     const { message } = data;
     return setAlertText(message);
   }
