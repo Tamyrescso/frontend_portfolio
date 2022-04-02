@@ -11,9 +11,10 @@ import { fab, faGithub, faFacebook, faLinkedin } from '@fortawesome/free-brands-
 library.add(fab);
 
 function Contact() {
-  const { darkTheme } = useContext(PortfolioContext);
+  const { darkTheme, handleAlert } = useContext(PortfolioContext);
   return (
     <div className='contactPage'>
+      { handleAlert === 'openAlert' && <div className='blurDiv'></div>}
       <Header/>
       <div className='mainContact'>
         <ContactForm />

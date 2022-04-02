@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import validationForm from '../utils/validations';
 import sendMessage from '../services';
+import Alert from '../components/Alert';
 import PortfolioContext from '../context/PortfolioContext';
 import '../style/contactForm.css';
 
@@ -10,7 +11,9 @@ function ContactForm() {
     email: '',
     message: ''
   });
-  const { language, darkTheme } = useContext(PortfolioContext);
+  const [alertText, setAlertText] = useState('');
+  const [type, setType] = useState('');
+  const { language, setHandleAlert, handleAlert } = useContext(PortfolioContext);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,11 +25,18 @@ function ContactForm() {
     e.preventDefault();
 
     const validate = validationForm(fields);
-    if(validate) return alert(validate.error);
+    if(validate) {
+      setType('error')
+      setAlertText(validate.error);
+      return setHandleAlert('openAlert');
+    }
 
+    setType('success')
+    setAlertText('Sending Message...');
+    setHandleAlert('openAlert');
     const { data } = await sendMessage(fields);
     const { message } = data;
-    return alert(message);
+    return setAlertText(message);
   }
 
   const ptForm = (
@@ -62,6 +72,8 @@ function ContactForm() {
   return (
     <div className='formContact'>
       { language === 'pt'? ptForm : enForm }
+      <Alert text={alertText} type={type}/>
+      { handleAlert === 'openAlert' && <div className='blurDiv'></div>}
     </div>
   )
 }

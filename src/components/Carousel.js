@@ -29,7 +29,7 @@ function Carousel() {
   setSlideIndex(slideIndex + n);
   }
 
-  function showSlides(n) {
+  const showSlides = (n) => {
     let slides = document.getElementsByClassName('carouselItem');
     let previousSlide = document.querySelector('.showItem');
     if (slides.length) {
