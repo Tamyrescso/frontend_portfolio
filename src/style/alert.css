@@ -1,3 +1,4 @@
+/* Estilization based on the following link: https://codepen.io/juliepark/pen/vjMOKQ */
 .closeAlert {
   display: none;
 }
@@ -47,10 +48,6 @@
 
 .successIcon {
   animation: bounce 1s ease-in infinite;
-}
-
-.errorIcon {
-  /* animation: roll 3s ease-in-out infinite; */
 }
 
 @keyframes bounce {

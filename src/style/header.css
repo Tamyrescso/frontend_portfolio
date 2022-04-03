@@ -37,7 +37,7 @@
   width: 34vh;
   height: 7vh;
 }
-
+/* Switch based on the following link: https://codepen.io/avstorm/pen/jOEpBLW */
 .switchWrapper {
   display: flex;
   justify-content: space-around;
