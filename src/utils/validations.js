@@ -19,7 +19,7 @@ const validateForm = ({ name, email, message }, language) => {
   const errors = language === 'pt'? errorsPT : errorsEN;
   if(blank(name)) return { field: 'name', error: errors.name };
   if(blank(email)) return { field: 'email', error: errors.email };
-  if(regexMatch(/^.+@\w+(.com)$/, email)) return { field: 'email', error: errors.validEmail };
+  if(regexMatch(/^.+@\w+\.[a-z]+(\.[a-z]+)?$/, email)) return { field: 'email', error: errors.validEmail };
   if(blank(message)) return { field: 'email', error: errors.message };
 
   return null;
