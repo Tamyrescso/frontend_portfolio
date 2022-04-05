@@ -6,7 +6,7 @@ import '../style/home.css';
 
 function Home() {
   return (
-    <div>
+    <div className='homeWrapper'>
       <Header/>
       <Book/>
       <Footer/>

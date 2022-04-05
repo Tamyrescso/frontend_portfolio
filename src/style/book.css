@@ -1,13 +1,13 @@
 /* The book's stylization was based on the following codes: codepen.io/poulamic/pen/RwrKqmb, codepen.io/dhanishgajjar/pen/bjaYYo */
 .book {
   transform-style: preserve-3d;
-  position: absolute;
+  position: relative;
   height: 130vw;
   width: 100vw;
   cursor: pointer;
-  backface-visibility: hidden;
-  z-index: 1;
-  top: calc(50vh - 65vw);
+  backface-visibility: visible;
+  -webkit-backface-visibility: visible;
+  align-self: center;
   overflow-x: auto;
 }
 
@@ -26,6 +26,7 @@
   right:0;
   background: whitesmoke;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   position: absolute;
   border-radius: 10px 0px 0px 4px;
   box-shadow: inset 4px 6px 0px 0px #a19d9d;  
@@ -67,19 +68,15 @@
   overflow-y: auto;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-}
-
 .bookSelected .front:after {
   display: none;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   left: 92%;
 }
 
 .bookSelected .front{
   transform: rotateY(-180deg);
-  z-index: 0;
   box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
   left: 92%;
 }
@@ -93,14 +90,14 @@
 
 .bookSelected .page2 {
   transform: rotateY(-150deg);
-  z-index: 2;
+  z-index: 1;
   box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
   left: 92%;
 }
 
 .bookSelected .page3 {
   transform: rotateY(-120deg);
-  z-index: 2;
+  z-index: 1;
   box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
   left: 92%;
 }
@@ -141,7 +138,6 @@
 
 .coverText {
   position: absolute;
-  z-index: 2;
   top: 15%; left: 0;
   text-align: center;
   width: 100%;
@@ -150,6 +146,8 @@
   color: #500c0c;
   text-shadow: #ca6666 1px 1px 0, 2px 2px 2px rgba(206,89,55,0);
   line-height: 10vh;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .myPic {
@@ -176,7 +174,6 @@
   .book {
     width: 100vw;
     height: 140vw;
-    top: calc((100vh - 140vw)/2);
   }
 
   .front, .back, .page1, .page2, .page3, .page4, .page5, .page6 {
@@ -230,9 +227,7 @@
 @media (orientation: landscape) {
   .book {
     width: 100vh;
-    left: calc(50vw - 50vh);
     height: 70%;
-    top: 15%;
     overflow-x: hidden;
   }
 
