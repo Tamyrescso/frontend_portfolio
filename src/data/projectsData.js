@@ -9,7 +9,7 @@ import { starwars,
   blog_posts } from '../images/projects';
 const ptProjects = [
   {
-    title: 'Todo List',
+    title: 'To-do List',
     description: 'Projeto realizado quando eu estava no primeiro módulo da Trybe, Fundamentos do desenvolvimento Web, nele eu pratiquei os conhecimentos em HTML, CSS e JavaScript',
     repo: 'https://github.com/Tamyrescso/projetos_trybe/tree/main/fundamentos/todo_list',
     gif: todo,
@@ -61,7 +61,7 @@ const ptProjects = [
 
 const enProjects = [
   {
-    title: 'Todo List',
+    title: 'To-do List',
     description: "I've made this project when I was in the first module at Trybe, Web development fundamentals, in this project I practiced my knowledge in HTML, CSS and JavaScript",
     repo: 'https://github.com/Tamyrescso/projetos_trybe/tree/main/fundamentos/todo_list',
     gif: todo,
