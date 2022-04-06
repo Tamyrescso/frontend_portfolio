@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import darkLogo from '../images/logo_dark.svg';
+import darkLogo from '../images/logo.png';
 import PortfolioContext from '../context/PortfolioContext';
 import brazil from '../images/brasil.png';
 import usa from '../images/eua.png';

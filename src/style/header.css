@@ -156,6 +156,7 @@
     width: 7vh;
     margin-right: 27vh;
     margin-left: .5em;
+    filter: drop-shadow(2px 2px 2px black);
   }
   
   .logo:hover {
