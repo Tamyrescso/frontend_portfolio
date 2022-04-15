@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
+import Alert from '../components/Alert';
 import PortfolioContext from '../context/PortfolioContext';
 import '../style/contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,9 +12,10 @@ import { fab, faGithub, faFacebook, faLinkedin } from '@fortawesome/free-brands-
 library.add(fab);
 
 function Contact() {
-  const { darkTheme, handleAlert } = useContext(PortfolioContext);
+  const { darkTheme, handleAlert, type, alertText } = useContext(PortfolioContext);
   return (
     <div className='contactPage'>
+      <Alert text={alertText} type={type}/>
       { handleAlert === 'openAlert' && <div className='blurDiv'></div>}
       <Header/>
       <div className='mainContact'>

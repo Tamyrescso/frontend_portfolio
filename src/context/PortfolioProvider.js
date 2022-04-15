@@ -6,6 +6,8 @@ function PortfolioProvider({ children }) {
   const [darkTheme, setDarkTheme] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [handleAlert, setHandleAlert] = useState('closeAlert');
+  const [alertText, setAlertText] = useState('');
+  const [type, setType] = useState('');
 
 
   const values = {
@@ -17,6 +19,10 @@ function PortfolioProvider({ children }) {
     setDarkTheme,
     handleAlert,
     setHandleAlert,
+    alertText,
+    setAlertText,
+    type,
+    setType,
   }
   return (
     <PortfolioContext.Provider value={ values }>

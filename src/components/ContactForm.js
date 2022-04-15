@@ -11,9 +11,14 @@ function ContactForm() {
     email: '',
     message: ''
   });
-  const [alertText, setAlertText] = useState('');
-  const [type, setType] = useState('');
-  const { language, setHandleAlert, handleAlert } = useContext(PortfolioContext);
+  
+  const { language,
+    setHandleAlert,
+    handleAlert,
+    type,
+    setType,
+    alertText,
+    setAlertText } = useContext(PortfolioContext);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -78,8 +83,6 @@ function ContactForm() {
   return (
     <div className='formContact'>
       { language === 'pt'? ptForm : enForm }
-      <Alert text={alertText} type={type}/>
-      { handleAlert === 'openAlert' && <div className='blurDiv'></div>}
     </div>
   )
 }

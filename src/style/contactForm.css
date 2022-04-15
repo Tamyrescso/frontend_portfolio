@@ -8,7 +8,6 @@
   padding: 10px;
   width: 95%;
   height: fit-content;
-  z-index: 2;
 }
 
 label {
@@ -49,4 +48,3 @@ input[type=submit]:hover {
 #message {
   height: 18vh;
 }
-
