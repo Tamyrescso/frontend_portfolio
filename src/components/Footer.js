@@ -9,17 +9,15 @@ function Footer() {
 
   const enFooter = (
     <p className='textFooter'>
-      Made with TWO <FontAwesomeIcon className='spoon' icon={faSpoon} /> JS,
-      ONE <FontAwesomeIcon className='mug' icon={faMugHot} /> HTML
-      and PLENTY of CSS! <FontAwesomeIcon className='heart' icon={faHeart} />
+      Made with TWO <FontAwesomeIcon className='spoon' icon={faSpoon} /> <b>JS</b>,
+      ONE <FontAwesomeIcon className='mug' icon={faMugHot} /> <b>REACT</b> and PLENTY of <b>PURE CSS</b>! <FontAwesomeIcon className='heart' icon={faHeart} />
     </p>
   );
 
   const ptFooter = (
     <p className='textFooter'>
-      Feito com DUAS <FontAwesomeIcon className='spoon' icon={faSpoon} /> de JS,
-      UMA <FontAwesomeIcon className='mug' icon={faMugHot} /> de HTML
-      e CSS a gosto! <FontAwesomeIcon className='heart' icon={faHeart} />
+      Feito com DUAS <FontAwesomeIcon className='spoon' icon={faSpoon} /> de <b>JS</b>,
+      UMA <FontAwesomeIcon className='mug' icon={faMugHot} /> de <b>REACT</b> e <b>CSS PURO</b> a gosto! <FontAwesomeIcon className='heart' icon={faHeart} />
     </p>
   );
 
