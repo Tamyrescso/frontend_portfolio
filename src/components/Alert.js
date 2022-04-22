@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import PortfolioContext from '../context/PortfolioContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFaceFrown, faFaceLaughBeam, faSmile, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faFaceFrown, faFaceLaughBeam, faXmark } from '@fortawesome/free-solid-svg-icons';
 import '../style/alert.css';
 
 function Alert({text, type}) {

@@ -1,7 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import darkLogo from '../images/logo.png';
 import PortfolioContext from '../context/PortfolioContext';
+import { getStorage, setStorage } from '../services/storage';
+import darkLogo from '../images/logo.png';
 import brazil from '../images/brasil.png';
 import usa from '../images/eua.png';
 import moon from '../images/moon.png';
@@ -27,7 +28,8 @@ function Header() {
 
   function changeTheme(e) {
     const { checked } = e.target;
-    setDarkTheme(checked);
+    setStorage(checked);
+    setDarkTheme(getStorage());
   }
 
   const ptHeader = (

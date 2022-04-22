@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import PortfolioContext from './PortfolioContext';
+import { getStorage } from '../services/storage';
 
 function PortfolioProvider({ children }) {
   const [language, setLanguage] = useState('pt');
-  const [darkTheme, setDarkTheme] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(getStorage());
   const [showMenu, setShowMenu] = useState(false);
   const [handleAlert, setHandleAlert] = useState('closeAlert');
   const [alertText, setAlertText] = useState('');
