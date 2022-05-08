@@ -7,7 +7,7 @@ const aboutMeEn = (
       <p className='aboutText'>I was <b>unsatisfied</b> with my professional course and because of that I kept looking for <b>self knowledge</b> and new paths. Until one day in may, in the middle of my vacation, I  came across <b>Trybe</b> and I had an epiphany!</p>
       <p className='aboutText'><b>HOW I NEVER THOUGHT ABOUT THIS BEFORE?!</b></p>
       <p className='aboutText'>And so, with plenty of research, planning and <b>consciousness</b>, I quit my job and started on this journey that seems to have been handmade for me!</p>
-      <p className='aboutText'>Today, after almost 1 year, <b>Front End and future Full Stack developer</b>, I'm sure the career transition was the best decision I've ever made!</p>
+      <p className='aboutText'>Today, after almost 1 year, <b>and already a Full Stack developer</b>, I'm sure the career transition was the best decision I've ever made!</p>
     </>
 )
 
@@ -20,7 +20,7 @@ const aboutMePt = (
       <p className='aboutText'>Estava <b>insatisfeita</b> com meu rumo profissional e por isso continuei na busca pelo <b>autoconhecimento</b> e novos caminhos. Até que, num dia de férias em maio, eu topei com a <b>Trybe</b> e tive uma epifania!</p>
       <p className='aboutText'><b>COMO NUNCA PENSEI NISSO ANTES?!</b></p>
       <p className='aboutText'>E assim, com muita pesquisa, planejamento e <b>consciência</b>, eu larguei meu emprego e embarquei nessa jornada que parece que foi feita a mão pra mim!</p>
-      <p className='aboutText'>Hoje, depois de quase 1 ano, <b>desenvolvedora Front End e futura FullStack</b>, tenho certeza que a transição de carreira foi a melhor decisão que já tomei!</p>
+      <p className='aboutText'>Hoje, depois de quase 1 ano, <b> e já desenvolvedora Full Stack</b>, tenho certeza que a transição de carreira foi a melhor decisão que já tomei!</p>
     </>
 )
 
