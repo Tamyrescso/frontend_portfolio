@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react';
 import validationForm from '../utils/validations';
 import sendMessage from '../services';
-import Alert from '../components/Alert';
 import PortfolioContext from '../context/PortfolioContext';
 import '../style/contactForm.css';
 
@@ -14,17 +13,8 @@ function ContactForm() {
   
   const { language,
     setHandleAlert,
-    handleAlert,
-    type,
     setType,
-    alertText,
     setAlertText } = useContext(PortfolioContext);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    fields[name] = value;
-    setFields(fields); 
-  }
 
   const handleClick = async (e) => {
     e.preventDefault();
@@ -36,7 +26,7 @@ function ContactForm() {
       return setHandleAlert('openAlert');
     }
     
-    const sending = language === 'pt'? 'Enviando mensagem...' : 'Sending message...';
+    const sending = language === 'pt'? 'Conectando ao back-end...' : 'Connecting to backend...';
     setType('success')
     setAlertText(sending);
     setHandleAlert('openAlert');
@@ -53,13 +43,13 @@ function ContactForm() {
   const ptForm = (
     <form> 
       <label htmlFor="name">Nome</label>
-      <input type="text" id="name" name="name" onChange={handleChange} placeholder="Escreva seu nome ex.: Ada Lovelace" />
+      <input type="text" id="name" name="name" value={fields.name} onChange={ (e) => setFields({ ...fields, name: e.target.value }) } placeholder="Escreva seu nome ex.: Ada Lovelace" />
 
       <label htmlFor="email">E-mail</label>
-      <input type="text" id="email" name="email" onChange={handleChange} placeholder="Escreva seu e-mail ex.: email@email.com" />
+      <input type="text" id="email" name="email" value={fields.email} onChange={ (e) => setFields({ ...fields, email: e.target.value }) } placeholder="Escreva seu e-mail ex.: email@email.com" />
 
       <label htmlFor="message">Mensagem</label>
-      <textarea id="message" name="message" onChange={handleChange} placeholder="Fique à vontade para falar do meu portifólio aqui! me mande um comentário, elogio, dica, me chame para um projeto ou até me mande uma receita :)" className="textArea"></textarea>
+      <textarea id="message" name="message" value={fields.message} onChange={ (e) => setFields({ ...fields, message: e.target.value }) } placeholder="Fique à vontade para falar do meu portifólio aqui! me mande um comentário, elogio, dica, me chame para um projeto ou até me mande uma receita :)" className="textArea"></textarea>
 
       <input type="submit" value="Enviar" onClick={handleClick} />
     </form>
@@ -68,13 +58,13 @@ function ContactForm() {
   const enForm = (
     <form> 
       <label htmlFor="name">Name</label>
-      <input type="text" id="name" name="name" onChange={handleChange} placeholder="Write your name ex.: Ada Lovelace" />
+      <input type="text" id="name" name="name" value={fields.name} onChange={ (e) => setFields({ ...fields, name: e.target.value }) } placeholder="Write your name ex.: Ada Lovelace" />
 
       <label htmlFor="email">E-mail</label>
-      <input type="text" id="email" name="email" onChange={handleChange} placeholder="Write your email ex.: email@email.com" />
+      <input type="text" id="email" name="email" value={fields.email} onChange={ (e) => setFields({ ...fields, email: e.target.value }) } placeholder="Write your email ex.: email@email.com" />
 
       <label htmlFor="message">Message</label>
-      <textarea id="message" name="message" onChange={handleChange} placeholder="Be comfortable to talk about my portfolio here! send me a comment, a compliment, a tip, call me to work in a project or even send me a recipe :)" className="textArea"></textarea>
+      <textarea id="message" name="message" value={fields.message} onChange={ (e) => setFields({ ...fields, message: e.target.value }) } placeholder="Be comfortable to talk about my portfolio here! send me a comment, a compliment, a tip, call me to work in a project or even send me a recipe :)" className="textArea"></textarea>
 
       <input type="submit" value="Send" onClick={handleClick} />
     </form>
