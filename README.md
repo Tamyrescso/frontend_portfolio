@@ -19,6 +19,7 @@
  - Design responsivo para celulares e tablets.
  - Formulário de contato conectado ao back-end que salva os dados em um banco de dados na nuvem.
  [Link repositório Back-end](https://github.com/Tamyrescso/backend_portfolio)
+ - Deploy realizado no Heroku.
 
 ![Página de contato](https://github.com/Tamyrescso/frontend_portfolio/blob/main/imagesREADME/responsive_contact.png)
 
@@ -28,4 +29,4 @@
  - Consertar incompatibilidade com navegador Mozilla.
  - Adicionar testes.
  - Melhorar  abertura de página do livro.
- - Aliemntar com projetos e habilidades novas.
+ - Alimentar com projetos e habilidades novas.
